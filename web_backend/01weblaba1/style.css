@@ -1,0 +1,352 @@
+/* Основные стили для отчета по лабораторной работе */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #24292e;
+    background-color: #f6f8fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 30px;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 2.5em;
+    color: #0366d6;
+    border-bottom: 3px solid #e1e4e8;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #24292e;
+    margin: 25px 0 15px 0;
+    padding-left: 10px;
+    border-left: 5px solid #0366d6;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #586069;
+    margin: 20px 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #e1e4e8;
+}
+
+/* Секции заданий */
+.task {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Подзадачи */
+.subtask {
+    background-color: #f9f9f9;
+    border-left: 4px solid #6f42c1;
+    border-radius: 0 8px 8px 0;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.subtask h3 {
+    color: #6f42c1;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+/* Описания и команды */
+.description {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
+.description ul, .description ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.description li {
+    margin-bottom: 5px;
+}
+
+/* Блоки с командами */
+.command {
+    background-color: #f1f8ff;
+    border: 1px solid #c8e1ff;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+.command::before {
+    content: "$ ";
+    color: #6a737d;
+    font-weight: bold;
+}
+
+.command strong {
+    color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.command code {
+    background-color: #e6e6e6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #d73a49;
+}
+
+/* Многострочные команды */
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 15px 0;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    font-family: inherit;
+}
+
+/* Стили для скриншотов */
+.screenshot {
+    margin: 25px 0;
+    text-align: center;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fafbfc;
+}
+
+.screenshot img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d5da;
+    transition: transform 0.3s ease;
+}
+
+.screenshot img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #586069;
+    font-size: 0.95em;
+}
+
+/* Стили для кода в тексте */
+code {
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    color: #d73a49;
+}
+
+/* Таблицы (если понадобятся) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #f1f8ff;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #d1d5da;
+}
+
+td {
+    padding: 10px 12px;
+    border: 1px solid #d1d5da;
+}
+
+tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+tr:hover {
+    background-color: #f1f8ff;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    .task {
+        padding: 15px;
+    }
+    
+    .subtask {
+        padding: 15px;
+    }
+    
+    .command {
+        padding: 10px 15px;
+    }
+    
+    pre {
+        padding: 12px;
+        font-size: 0.85em;
+    }
+}
+
+/* Для печати */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        padding: 15px;
+    }
+    
+    .task {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .screenshot img {
+        max-width: 80%;
+        box-shadow: none;
+    }
+    
+    .screenshot img:hover {
+        transform: none;
+    }
+    
+    .command::before {
+        content: "> ";
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Стили для ссылок (если появятся) */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для заметок и важной информации */
+.note {
+    background-color: #fff5b1;
+    border-left: 4px solid #ffd33d;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.warning {
+    background-color: #ffeef0;
+    border-left: 4px solid #d73a49;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Стили для списков */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Разделители */
+hr {
+    border: none;
+    border-top: 2px solid #e1e4e8;
+    margin: 30px 0;
+}
